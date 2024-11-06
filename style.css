@@ -1,35 +1,46 @@
-.st-emotion-cache-99ud0u a{
-    color: #ffd452;
+.st-emotion-cache-5pcrmz a{
+    color: #65c7f7;
     text-decoration: none;
 }
 
-.st-emotion-cache-99ud0u a:hover{
-    color: #544a7d;
-    text-decoration: underline;
+
+.st-emotion-cache-5pcrmz a:hover{
+    color: #0052d4;
+    /*text-decoration: underline;*/
     transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
     transition-timing-function: ease-in-out;
-    transition-duration: 150ms;
+    transition-duration: 300ms;
+    /*transform: scaleX(1);*/
+    /*transform-origin: bottom center;*/
 }
 
-h1 .st-emotion-cache-10trblm {
+.st-emotion-cache-m78myu h1 {
     /*font-size: 72px;*/
-    background: rgb(2,0,36);
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(84,74,125,1) 0%, rgba(147,125,109,1) 30%, rgba(255,212,82,1) 100%);
+    background: rgb(156,236,251);
+    background: linear-gradient(90deg, rgba(156,236,251,1) 0%, rgba(101,199,247,1) 20%, rgba(0,82,212,1) 100%);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
 }
 
-.st-emotion-cache-99ud0u svg {
+.st-emotion-cache-5pcrmz svg {
     transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
     transition-timing-function: ease-in-out;
     transition-duration: 150ms;
 }
 
-.st-emotion-cache-99ud0u svg:hover {
+.st-emotion-cache-5pcrmz svg:hover {
     /*background: rgb(2,0,36);*/
     /*background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(84,74,125,1) 0%, rgba(147,125,109,1) 30%, rgba(255,212,82,1) 100%);*/
     /*-webkit-text-fill-color: transparent;*/
     /*-webkit-background-clip: text;*/
     color: magenta;
+}
+
+.education_location {
+    color: #65c7f7;
+}
+
+li::marker {
+    color: #65c7f7;
 }
 

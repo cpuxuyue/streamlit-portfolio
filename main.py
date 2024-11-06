@@ -5,6 +5,22 @@ import base64
 import textwrap
 from social_media_icons import SocialMediaIcons
 
+from streamlit_carousel import carousel
+test_items = [
+    dict(
+        title="",
+        text="",
+        img="assets/images/Vasileios Papastergios - Graduation Valedictorian - July 2024.jpeg",
+        # link="https://discuss.streamlit.io/t/new-component-react-bootstrap-carousel/46819",
+    ),
+    dict(
+        title="",
+        text="",
+        img="assets/images/Vasileios Papastergios - Euroscola Representative - March 2018.JPG",
+        # link="https://github.com/thomasbs17/streamlit-contributions/tree/master/bootstrap_carousel",
+    )
+]
+
 with open('style.css') as f:
     st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
 
@@ -69,45 +85,73 @@ with education:
     # header_underline()
     st.markdown("""
     ### Computer Science BSc. School of Informatics
-    Aristotle University - Thessaloniki, Greece
+    <span class="education_location">Aristotle University - Thessaloniki, Greece</span>
     
     Oct 2019 - Jul 2024
     
     - Grade: 9.57 / 10.0 - **top 1%** and Graduation Valedictorian
     - Thesis: Data Quality Assessment for Static & Streaming Data
     - Degree specializations: Artificial Intelligence, Data & Web Management
-    - TODO transcript of records
-    """)
-    st.button("Transcript of records")
+    """, unsafe_allow_html=True)
+    st.button("See transcript of records", icon=":material/description:")
     st.divider()
     st.markdown("""
     ### Army ROTC, Military Science and Operations
-    Reserve Officer Infantry School & Specialized Training Wing - Heraklion, Greece
+    <span class="education_location">Reserve Officer Infantry School & Specialized Training Wing - Heraklion, Greece</span>
 
     Oct 2021 – Mar 2022
 
     - Graduated 5th among 56 from the Reserve Officer Infantry School, **top-seeded** in age group 18 – 21 and top 7% overall.
     - Admitted in 2nd & graduated **1st among 26** from the Specialized Training Wing.
     - Executed Staff Sergeant Duties and served as Training Platoon Commander among trainees.
-    - TODO SEAP certificate
-    """)
-    st.button("Military Cerificate")
+    """, unsafe_allow_html=True)
+    st.button("See certificate", icon=":material/description:")
     st.divider()
     st.markdown("""
         ### Upper Secondary National Apolytirion
-        4th Regional Senior High School - Kozani, Greece
+        <span class="education_location">4th Regional Senior High School - Kozani, Greece</span>
 
         Sep 2016 – Jun 2019
 
         - GPA: 20/20, Science & IT Branch, Economics & IT Elective
         - Represented my country as a member of the Youth EU Parliament in Strasbourg, France (March 2018). Ranked in top 5% of applicants to get selected, based on various criteria.
-        - TODO add Apolytirion
-    """)
-    st.button("High School Degree")
+    """, unsafe_allow_html=True)
+    st.button("See diploma", icon=":material/description:")
 
 with achievements:
-    st.header("Achievements & Distinctions")
-    header_underline()
+    st.markdown("""
+        ### Graduation Valedictorian
+        <span class="education_location">Aristotle University, Thessaloniki, Greece</span>
+        
+        July 2024
+        
+        Graduated with the highest grade point average (9.57 / 10.0) among 83 alumni at the Computer Science B.Sc. School of Informatics AUTh.
+    """, unsafe_allow_html=True)
+    st.image("assets/images/Vasileios Papastergios - Graduation Valedictorian - July 2024.jpeg")
+    st.divider()
+
+    st.markdown("""
+            ### Training Platoon Commander
+            <span class="education_location">Heraklion & Evros, Greece</span>
+
+            March 2022
+
+            Admitted in 2nd & graduated 1st out of 26 from the Specialized Training Wing of the Reserve Officer Infantry School. Executed Staff Sergeant Duties and served as Training Platoon Commander among trainees. Successfully completed 1 international & 10+ national tactical exercises.
+        """, unsafe_allow_html=True)
+    # st.image("assets/images/Vasileios Papastergios - Graduation Valedictorian - July 2024.jpeg")
+    carousel(items=test_items)
+    st.divider()
+
+    st.markdown("""
+            ### Euroscola Representative
+            <span class="education_location">European Parliament, Strasbourg, France</span>
+
+            March 2018
+
+            Represented Greece as a member of the Youth EU Parliament in Strasbourg, France. Ranked
+            in top 5% of applicants to get selected based on various criteria, including writing - intellectual assessments and personal interviews.
+        """, unsafe_allow_html=True)
+    st.image("assets/images/Vasileios Papastergios - Euroscola Representative - March 2018.JPG")
 
 with experience:
     st.header("Work Experience")
