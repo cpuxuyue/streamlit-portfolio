@@ -47,7 +47,7 @@ left, right = st.columns([4, 1])
 with left:
     st.write("Hello traveller,")
     st.title("I'm Vasileios Papastergios,")
-    st.write("a Computer Science graduate with an avid passion for sports.")
+    st.write("a Computer Science graduate with a passion for data-centric, impactful solutions.")
 with right:
     st.image("Vasileios Papastergios.png")
 
