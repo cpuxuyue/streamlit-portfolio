@@ -10,13 +10,13 @@ test_items = [
     dict(
         title="",
         text="",
-        img="assets/images/Vasileios Papastergios - Graduation Valedictorian - July 2024.jpeg",
+        img="assets/images/Vasileios Papastergios - Military Parade - May 2022.jpg",
         # link="https://discuss.streamlit.io/t/new-component-react-bootstrap-carousel/46819",
     ),
     dict(
         title="",
         text="",
-        img="assets/images/Vasileios Papastergios - Euroscola Representative - March 2018.JPG",
+        img="assets/images/Vasileios Papastergios - Army Officer Graduation - March 2022.png",
         # link="https://github.com/thomasbs17/streamlit-contributions/tree/master/bootstrap_carousel",
     )
 ]
@@ -93,7 +93,7 @@ with education:
     - Thesis: Data Quality Assessment for Static & Streaming Data
     - Degree specializations: Artificial Intelligence, Data & Web Management
     """, unsafe_allow_html=True)
-    st.button("See transcript of records", icon=":material/description:")
+    st.link_button("See transcript of records", url="https://drive.google.com/file/d/1Jm-H1rnyRLoMjvrZwngEOnQojHQ8awCz/view?usp=sharing", icon=":material/description:")
     st.divider()
     st.markdown("""
     ### Army ROTC, Military Science and Operations
@@ -105,7 +105,7 @@ with education:
     - Admitted in 2nd & graduated **1st among 26** from the Specialized Training Wing.
     - Executed Staff Sergeant Duties and served as Training Platoon Commander among trainees.
     """, unsafe_allow_html=True)
-    st.button("See certificate", icon=":material/description:")
+    st.link_button("See certificates", icon=":material/description:", url="https://drive.google.com/drive/folders/1II_90vrue4JDzDg7_Tt951LPWjWv1laZ?usp=sharing")
     st.divider()
     st.markdown("""
         ### Upper Secondary National Apolytirion
@@ -116,7 +116,7 @@ with education:
         - GPA: 20/20, Science & IT Branch, Economics & IT Elective
         - Represented my country as a member of the Youth EU Parliament in Strasbourg, France (March 2018). Ranked in top 5% of applicants to get selected, based on various criteria.
     """, unsafe_allow_html=True)
-    st.button("See diploma", icon=":material/description:")
+    st.link_button("See diploma", icon=":material/description:", url="https://drive.google.com/file/d/1qPf6GVB9TV4mTX037tREMoGWo1Nnxeab/view?usp=sharing")
 
 with achievements:
     st.markdown("""
