@@ -70,8 +70,8 @@ with experience:
     header_underline()
 
 with projects:
-    st.header("Projects & Technologies")
-    header_underline()
+    from sections.projects import get_projects_section
+    get_projects_section()
 
 with volunteerism:
     st.header("Volunteerism & Community")
