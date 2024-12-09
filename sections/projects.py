@@ -6,6 +6,7 @@ def get_projects_section():
     parameters.BORDER_RADIUS = "0.25rem"
     parameters.PADDING = "0.5rem"
     parameters.LABEL_SPACING = "0.5rem"
+    PYTHON_COLOR_CODE = "#a17e00"
 
     st.header("Stream DaQ")
     stream_daq_logo, stream_daq_description = st.columns(2)
@@ -18,7 +19,7 @@ def get_projects_section():
                        icon=":material/terminal:")
     st.write("Powered by:")
     annotated_text(
-        ("Python", "core", "#f0c100"),
+        ("Python", "core", PYTHON_COLOR_CODE),
         "\t",
         ("Pathway", "stream processing", "#162ceb"),
         "\t",
@@ -69,13 +70,13 @@ def get_projects_section():
                        icon=":material/terminal:")
     st.write("Powered by:")
     annotated_text(
-        ("Python", "core", "#f0c100"),
+        ("Python", "core", PYTHON_COLOR_CODE),
         "\t",
         ("Matplotlib", "3D visualizations", "#d6854f"),
     )
     st.divider()
 
-    st.write("It seems you have reached the end of this page! Luckily, my projects do not end here. Should you want to see more, feel free to visit my GitHub profile, where all my past and current projects are available!")
+    st.write("It seems you have reached the end of this page! Luckily, my projects do not end here! Should you wish to see more, feel free to visit my GitHub profile, where 12+ past and current projects of mine have been made publicly available.")
     st.link_button("See GitHub profile",
                    url="https://github.com/Bilpapster/SimpleSim",
                    icon=":material/terminal:")
