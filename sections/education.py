@@ -10,11 +10,14 @@ def get_education_section():
         Oct 2019 - Jul 2024
 
         - Grade: 9.57 / 10.0 - **top 1%** and Graduation Valedictorian
-        - Thesis: Data Quality Assessment for Static & Streaming Data
+        - Thesis: Investigation & Implementation of Data Quality Checks (supervised by Prof. A. Gounaris)
         - Degree specializations: Artificial Intelligence, Data & Web Management
         """, unsafe_allow_html=True)
     st.link_button("See transcript of records",
                    url="https://drive.google.com/file/d/1Jm-H1rnyRLoMjvrZwngEOnQojHQ8awCz/view?usp=sharing",
+                   icon=":material/description:")
+    st.link_button("See BSc Thesis (greek)",
+                   url="https://ikee.lib.auth.gr/record/358513/?ln=en",
                    icon=":material/description:")
     st.divider()
     st.markdown("""
