@@ -1,5 +1,5 @@
 import streamlit as st
-from annotated_text import annotated_text, parameters
+from annotated_text import annotated_text, parameters, annotation
 
 def get_projects_section():
     parameters.SHOW_LABEL_SEPARATOR = True
@@ -7,6 +7,11 @@ def get_projects_section():
     parameters.PADDING = "0.5rem"
     parameters.LABEL_SPACING = "0.5rem"
     PYTHON_COLOR_CODE = "#a17e00"
+    SCALA_COLOR_CODE = "#d73937"
+    JAVA_COLOR_CODE = "#f39a32"
+    HADOOP_COLOR_CODE = "#0ca8fa"
+    SPARK_COLOR_CODE = "#dc5b19"
+    LATEX_COLOR_CODE = "#207f7f"
 
     st.header("Stream DaQ")
     stream_daq_logo, stream_daq_description = st.columns(2)
@@ -27,6 +32,16 @@ def get_projects_section():
         "\t",
         ("PostgreSQL", "source/sink", "#356790"),
     )
+    st.write("Skills:")
+    annotated_text(
+        annotation("data streaming", background='#121212', border='1px solid grey'),
+        "\t",
+        annotation("real-time processing", background='#121212', border='1px solid grey'),
+        "\t",
+        annotation("data quality", background='#121212', border='1px solid grey'),
+        "\t",
+        annotation("software engineering", background='#121212', border='1px solid grey'),
+    )
     st.divider()
 
     st.header("Cluster them out!")
@@ -35,17 +50,95 @@ def get_projects_section():
         st.image("assets/images/Cluster them out logo.png")
     with cluster_them_out_description:
         st.write(
-            "Scalable outlier detection workflow for spatial 2-dimensional data, leveraging clustering techniques. Part of University project co-developed with my esteemed friend and colleague, Lazaros.")
+            "Scalable outlier detection workflow for spatial 2-dimensional data, leveraging clustering techniques. Part of University project co-developed with my friend and bright colleague, Lazaros.")
         st.link_button("See source code",
                        url="https://github.com/Bilpapster/cluster-them-out",
                        icon=":material/terminal:")
     st.write("Powered by:")
     annotated_text(
-        ("Scala", "core", "#d73937"),
+        ("Scala", "core", SCALA_COLOR_CODE),
         "\t",
         ("R", "core", "#2366b5"),
         "\t",
-        ("Apache Spark", "computing framework", "#dc5b19"),
+        ("Apache Spark", "computing framework", SPARK_COLOR_CODE),
+    )
+    st.write("Skills:")
+    annotated_text(
+        annotation("data mining", background='#121212', border='1px solid grey'),
+        "\t",
+        annotation("outlier detection", background='#121212', border='1px solid grey'),
+        "\t",
+        annotation("k-means clustering", background='#121212', border='1px solid grey'),
+        "\t",
+        annotation("hierarchical clustering", background='#121212', border='1px solid grey'),
+    )
+    st.divider()
+
+    st.header("Big Data playground")
+    nns_playground_logo, nns_playground_description = st.columns(2)
+    with nns_playground_logo:
+        st.image("assets/images/Big Data playground.png")
+    with nns_playground_description:
+        st.write(
+            "University project featuring various algorithms & techniques for processing large volumes of both structured and unstructured data, including multi-threading programming, parallelization & distribution. Co-developed with my esteemed colleague, Christos.")
+        st.link_button("See source code",
+                       url="https://github.com/Bilpapster/big-data-playground",
+                       icon=":material/terminal:")
+    st.write("Powered by:")
+    annotated_text(
+        ("Java", "core", JAVA_COLOR_CODE),
+        "\t",
+        ("Scala", "core", SCALA_COLOR_CODE),
+        "\t",
+        ("Apache Hadoop", "distributed processing", HADOOP_COLOR_CODE),
+        "\t",
+        ("Apache Spark", "distributed processing", SPARK_COLOR_CODE),
+        "\t",
+        ("LaTeX", "reporting", LATEX_COLOR_CODE),
+    )
+    st.write("Skills:")
+    annotated_text(
+        annotation("big data analytics", background='#121212', border='1px solid grey'),
+        "\t",
+        annotation("multi-threading", background='#121212', border='1px solid grey'),
+        "\t",
+        annotation("distributed processing", background='#121212', border='1px solid grey'),
+        "\t",
+        annotation("graph mining", background='#121212', border='1px solid grey'),
+        "\t",
+        annotation("software engineering", background='#121212', border='1px solid grey'),
+    )
+    st.divider()
+
+    st.header("Neural Networks (NNs) playground")
+    nns_playground_logo, nns_playground_description = st.columns(2)
+    with nns_playground_logo:
+        st.image("assets/images/NNs playground.png")
+    with nns_playground_description:
+        st.write(
+            "University project featuring various Deep Learning algorithms & techniques mainly focusing on image data. Among others, the project addresses the novel and non-trivial task of developing an \"Adder Autoencoder\" which takes as input two image digits and constructs their sum as image, as shown in the thumbnail figure.")
+        st.link_button("See source code",
+                       url="https://github.com/Bilpapster/NNs-playground",
+                       icon=":material/terminal:")
+    st.write("Powered by:")
+    annotated_text(
+        ("Python", "core", PYTHON_COLOR_CODE),
+        "\t",
+        ("Jupiter Notebook", "computing platform", "#ed7936"),
+        "\t",
+        ("scikit-learn", "ML algorithms", "#f39b45"),
+        "\t",
+        ("Keras", "DL algorithms", "#cb1818"),
+    )
+    st.write("Skills:")
+    annotated_text(
+        annotation("machine learning", background='#121212', border='1px solid grey'),
+        "\t",
+        annotation("deep learning", background='#121212', border='1px solid grey'),
+        "\t",
+        annotation("multiclass image classification", background='#121212', border='1px solid grey'),
+        "\t",
+        annotation("image reconstruction", background='#121212', border='1px solid grey'),
     )
     st.divider()
 
@@ -73,6 +166,13 @@ def get_projects_section():
         ("Python", "core", PYTHON_COLOR_CODE),
         "\t",
         ("Matplotlib", "3D visualizations", "#d6854f"),
+    )
+    st.write("Skills:")
+    annotated_text(
+        annotation("software engineering", background='#121212', border='1px solid grey'),
+        "\t",
+        annotation("visualizations", background='#121212', border='1px solid grey'),
+        "\t",
     )
     st.divider()
 
