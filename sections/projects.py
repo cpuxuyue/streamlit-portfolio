@@ -49,8 +49,8 @@ def get_projects_section():
     with cluster_them_out_logo:
         st.image("assets/images/Cluster them out logo.png")
     with cluster_them_out_description:
-        st.write(
-            "Scalable outlier detection workflow for spatial 2-dimensional data, leveraging clustering techniques. Part of University project co-developed with my friend and bright colleague, Lazaros.")
+        st.markdown(
+            "Scalable outlier detection workflow for spatial 2-dimensional data, leveraging clustering techniques. Part of University project co-developed with my friend and bright colleague, [Lazaros](https://github.com/lazarosgogos).")
         st.link_button("See source code",
                        url="https://github.com/Bilpapster/cluster-them-out",
                        icon=":material/terminal:")
@@ -79,8 +79,8 @@ def get_projects_section():
     with nns_playground_logo:
         st.image("assets/images/Big Data playground.png")
     with nns_playground_description:
-        st.write(
-            "University project featuring various algorithms & techniques for processing large volumes of both structured and unstructured data, including multi-threading programming, parallelization & distribution. Co-developed with my esteemed colleague, Christos.")
+        st.markdown(
+            "University project featuring various algorithms & techniques for processing large volumes of both structured and unstructured data, including multi-threading programming, parallelization & distribution. Co-developed with my esteemed colleague, [Christos](https://github.com/balaktsis).")
         st.link_button("See source code",
                        url="https://github.com/Bilpapster/big-data-playground",
                        icon=":material/terminal:")
