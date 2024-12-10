@@ -90,9 +90,9 @@ def get_projects_section():
         "\t",
         ("Scala", "core", SCALA_COLOR_CODE),
         "\t",
-        ("Apache Hadoop", "distributed processing", HADOOP_COLOR_CODE),
+        ("Apache Hadoop", "map-reduce", HADOOP_COLOR_CODE),
         "\t",
-        ("Apache Spark", "distributed processing", SPARK_COLOR_CODE),
+        ("Apache Spark", "distribution", SPARK_COLOR_CODE),
         "\t",
         ("LaTeX", "reporting", LATEX_COLOR_CODE),
     )
