@@ -66,8 +66,8 @@ with achievements:
     get_achievements_section()
 
 with experience:
-    st.header("Work Experience")
-    header_underline()
+    from sections.experiences import get_experiences_section
+    get_experiences_section()
 
 with projects:
     from sections.projects import get_projects_section
