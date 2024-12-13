@@ -18,7 +18,7 @@ def get_projects_section():
     with stream_daq_logo:
         st.image("assets/images/Stream DaQ logo.png")
     with stream_daq_description:
-        st.write("Real-time data quality monitoring tailored to data streams. 60+ metrics to cherry-pick the ones that make the difference in your use-case!")
+        st.markdown("Real-time quality monitoring for data streams. 60+ metrics to cherry-pick the ones that fit your use-case! Part of active research project at [Datalab](http://datalab.csd.auth.gr/).")
         st.link_button("See source code",
                        url="https://github.com/Bilpapster/stream-DaQ",
                        icon=":material/terminal:")
