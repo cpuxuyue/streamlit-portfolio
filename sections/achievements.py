@@ -1,22 +1,6 @@
 import streamlit as st
 
 def get_achievements_section():
-    from streamlit_carousel import carousel
-    army_photos_carousel_items = [
-        dict(
-            title="",
-            text="",
-            img="assets/images/Vasileios Papastergios - Military Parade - May 2022.jpg",
-            # link="https://discuss.streamlit.io/t/new-component-react-bootstrap-carousel/46819",
-        ),
-        dict(
-            title="",
-            text="",
-            img="assets/images/Vasileios Papastergios - Army Officer Graduation - March 2022.png",
-            # link="https://github.com/thomasbs17/streamlit-contributions/tree/master/bootstrap_carousel",
-        )
-    ]
-
     st.markdown("""
             ### Graduation Valedictorian
             <span class="education_location">Aristotle University, Thessaloniki, Greece</span>
@@ -36,8 +20,11 @@ def get_achievements_section():
 
                 Admitted in 2nd & graduated 1st out of 26 from the Specialized Training Wing of the Reserve Officer Infantry School. Executed Staff Sergeant Duties and served as Training Platoon Commander among trainees. Successfully completed 1 international & 10+ national tactical exercises.
             """, unsafe_allow_html=True)
-    # st.image("assets/images/Vasileios Papastergios - Graduation Valedictorian - July 2024.jpeg")
-    carousel(items=army_photos_carousel_items)
+    left_image, right_image = st.columns(2)
+    with left_image:
+        st.image("assets/images/Vasileios Papastergios - Military Parade - May 2022.JPG")
+    with right_image:
+        st.image("assets/images/Vasileios Papastergios - Army Officer Graduation - March 2022.png")
     st.divider()
 
     st.markdown("""
