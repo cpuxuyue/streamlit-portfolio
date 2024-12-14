@@ -4,7 +4,7 @@ import sys
 from pathlib import Path
 
 dir = Path(__file__).absolute()
-sys.path.append(str(dir))
+sys.path.append(str(dir) + "/sections/")
 
 st.set_page_config(
     page_title="Vasileios Papastergios' personal website",
