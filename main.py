@@ -1,9 +1,9 @@
 import streamlit as st
 import base64
 import sys
-import path
+from pathlib import Path
 
-dir = path.Path(__file__).absolute()
+dir = Path(__file__).absolute()
 sys.path.append(str(dir))
 
 st.set_page_config(
