@@ -74,8 +74,8 @@ with projects:
     get_projects_section()
 
 with volunteerism:
-    st.header("Volunteerism & Community")
-    header_underline()
+    from sections.volunteerism import get_volunteerism_section
+    get_volunteerism_section()
 
 with contact:
     from sections.contact import get_contact_section
