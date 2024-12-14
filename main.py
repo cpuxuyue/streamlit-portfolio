@@ -1,11 +1,16 @@
 import streamlit as st
-import streamlit.components.v1 as components
 import base64
+import sys
+import path
+
+dir = path.Path(__file__).absolute()
+sys.path.append(str(dir))
 
 st.set_page_config(
     page_title="Vasileios Papastergios' personal website",
     page_icon=":computer:",
 )
+
 
 
 with open('style.css') as f:

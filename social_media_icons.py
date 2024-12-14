@@ -1,8 +1,9 @@
 import streamlit as st
 import re
-import math
 # import warnings
-from bs4 import BeautifulSoup
+# from bs4 import BeautifulSoup
+
+
 
 
 class SocialMediaIcons:
@@ -85,17 +86,17 @@ class SocialMediaIcons:
 
     def render(self, sidebar=False, justify_content='center'):
         html_content = self._get_html(justify_content)
-        if sidebar:
-            soup = BeautifulSoup(html_content, 'html.parser')
-            a_tags = soup.find_all('a')
-            num_links = len(a_tags)
-            if num_links > 9:
-                num_links_first_part = math.ceil(num_links / 2)
-                first_part_links = ''.join(str(tag) for tag in a_tags[:num_links_first_part])
-                second_part_links = ''.join(str(tag) for tag in a_tags[num_links_first_part:])
-                html_content = f'<div style="display: flex; align-items: center; justify-content: {justify_content}; gap: 10px;">{first_part_links}</div><br><div style="display: flex; align-items: center; justify-content: {justify_content}; gap: 10px;">{second_part_links}</div>'
-                st.sidebar.markdown(html_content, unsafe_allow_html=True)
-            else:
-                st.sidebar.markdown(html_content, unsafe_allow_html=True)
-        else:
-            st.markdown(html_content, unsafe_allow_html=True)
+        # if sidebar:
+        #     soup = BeautifulSoup(html_content, 'html.parser')
+        #     a_tags = soup.find_all('a')
+        #     num_links = len(a_tags)
+        #     if num_links > 9:
+        #         num_links_first_part = math.ceil(num_links / 2)
+        #         first_part_links = ''.join(str(tag) for tag in a_tags[:num_links_first_part])
+        #         second_part_links = ''.join(str(tag) for tag in a_tags[num_links_first_part:])
+        #         html_content = f'<div style="display: flex; align-items: center; justify-content: {justify_content}; gap: 10px;">{first_part_links}</div><br><div style="display: flex; align-items: center; justify-content: {justify_content}; gap: 10px;">{second_part_links}</div>'
+        #         st.sidebar.markdown(html_content, unsafe_allow_html=True)
+        #     else:
+        #         st.sidebar.markdown(html_content, unsafe_allow_html=True)
+        # else:
+        st.markdown(html_content, unsafe_allow_html=True)
