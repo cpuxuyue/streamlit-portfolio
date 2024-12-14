@@ -75,15 +75,16 @@ def get_projects_section():
     st.divider()
 
     st.header("Big Data playground")
-    nns_playground_logo, nns_playground_description = st.columns(2)
-    with nns_playground_logo:
+    big_data_playground_logo, big_data_playground_description = st.columns(2)
+    with big_data_playground_logo:
         st.image("assets/images/Big Data playground.png")
-    with nns_playground_description:
+    with big_data_playground_description:
         st.markdown(
-            "University project featuring various algorithms & techniques for processing large volumes of both structured and unstructured data, including multi-threading programming, parallelization & distribution. Co-developed with my esteemed colleague, [Christos](https://github.com/balaktsis).")
-        st.link_button("See source code",
-                       url="https://github.com/Bilpapster/big-data-playground",
-                       icon=":material/terminal:")
+            "University project featuring various algorithms & techniques for processing large volumes of both structured and unstructured data, including multi-threading programming, parallelization & distribution. Co-developed with my esteemed colleague, [Christos](https://github.com/balaktsis). The project will be open-sourced on semester end (Feb 2025).")
+        # todo: enable button when the project is open-sourced
+        # st.link_button("See source code",
+        #                url="https://github.com/Bilpapster/big-data-playground",
+        #                icon=":material/terminal:")
     st.write("Powered by:")
     annotated_text(
         ("Java", "core", JAVA_COLOR_CODE),

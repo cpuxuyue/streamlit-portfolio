@@ -70,4 +70,3 @@ def get_experiences_section():
                 - Executed >15 race plans in Northern Greece.
                 - Developed smart Excel sheets for logistics of equipment and sales procedures standardization.
                 """, unsafe_allow_html=True)
-    st.divider()

@@ -1,32 +1,15 @@
 import streamlit as st
-# from st_social_media_links import SocialMediaIcons
 import streamlit.components.v1 as components
 import base64
-import textwrap
 
-
+st.set_page_config(
+    page_title="Vasileios Papastergios' personal website",
+    page_icon=":computer:",
+)
 
 
 with open('style.css') as f:
     st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
-
-def header_underline():
-    return components.html("""
-        <hr style="
-            position: absolute;
-            left: 0px;
-            top: 0px;
-            border-radius: 25px;
-            height:3px;
-            border: none;
-            color:#333;
-            background: rgb(2,0,36);
-            background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(84,74,125,1) 0%, rgba(147,125,109,1) 30%, rgba(255,212,82,1) 100%);
-            width:99%;
-            padding:0px;
-            margin:0;
-        " /> 
-    """, height=3)
 
 def render_svg(svg):
     """Renders the given svg string."""
@@ -42,16 +25,10 @@ def email_svg():
     return
 
 
-left, right = st.columns([4, 1])
+from utilities import render_about_information
 
-with left:
-    st.write("Hello traveller,")
-    st.title("I'm Vasileios Papastergios,")
-    st.write("a Computer Science graduate with a passion for data-centric, impactful solutions.")
-with right:
-    st.image("Vasileios Papastergios.png")
-
-about, education, achievements, experience, projects, volunteerism, contact = st.tabs(["About", "Education", "Achievements", "Experience", "Projects", "Volunteerism", "Contact"])
+render_about_information()
+about, education, achievements, experience, projects, volunteerism = st.tabs(["About", "Education", "Achievements", "Experience", "Projects", "Volunteerism"])
 
 with about:
     from sections.about import get_about_section
@@ -77,8 +54,6 @@ with volunteerism:
     from sections.volunteerism import get_volunteerism_section
     get_volunteerism_section()
 
-with contact:
-    from sections.contact import get_contact_section
-    get_contact_section()
-
+st.divider()
+st.markdown('[Back to Top](#i-m-vasileios-papastergios)')
 

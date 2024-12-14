@@ -74,7 +74,7 @@ class SocialMediaIcons:
         return None
 
     def _get_html(self, justify_content='center'):
-        html = f"""<div style="display: flex; align-items: center; justify-content: {justify_content}; gap: 20px; padding-top:20px">"""
+        html = f"""<div style="display: flex; align-items: center; justify-content: {justify_content}; gap: 20px; padding-top:20px; padding-bottom:40px;">"""
         if self.social_media_links:
             for link, color in zip(self.social_media_links, self.colors):
                 svg = self._get_platform_svg(link, color)

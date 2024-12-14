@@ -2,20 +2,7 @@ import streamlit as st
 
 def get_volunteerism_section():
 
-    @st.cache_data(ttl=3600)  # Cache images for 1 hour (=3600 seconds)
-    def get_images():
-        images = {}
-        images['open_discussion_1'] = "assets/images/Vasileios Papastergios - DAR YE Camp 1.png"
-        images['open_discussion_2'] = "assets/images/Vasileios Papastergios - DAR YE Camp 2.png"
-        images['farewell_1'] = "assets/images/Vasileios Papastergios - Farewell comments 1.jpg"
-        images['farewell_2'] = "assets/images/Vasileios Papastergios - Farewell comments 2.jpg"
-        images['outdoor_cooking'] = "assets/images/Vasileios Papastergios - DAR YE Camp 3.png"
-        images['love_nature'] = "assets/images/Vasileios Papastergios - DAR YE Camp 4.png"
-        images['endurance'] = "assets/images/Vasileios Papastergios - DAR YE Camp 5.png"
-        images['bill_builder'] = "assets/images/Vasileios Papastergios - DAR YE Camp 6.png"
-        images['skouras_group_photo'] = "assets/images/Vasileios Papastergios - Skouras Camp 1.jpg"
-        images['skouras_instructor'] = "assets/images/Vasileios Papastergios - Skouras Camp 2.JPG"
-        return images
+    from utilities import get_images
 
     images = get_images()
     st.markdown("""
@@ -47,7 +34,7 @@ def get_volunteerism_section():
     dar_ye_left, dar_ye_right = st.columns(2)
     with dar_ye_left:
         st.image(images['outdoor_cooking'], caption="Outdoor cooking activity with home-grown ingredients")
-        st.image(images['endurance'], caption="Endurance (not attention) is all you need (Sorry AI guys)")
+        st.image(images['endurance'], caption="Endurance is all you need (not attention, I'm sorry AI guys)")
     with dar_ye_right:
         st.image(images['love_nature'], caption="Returning love to mother nature :)")
         st.image(images['bill_builder'], caption="Building a home-made outdoor oven to cook yummy home-made pizza!")
@@ -67,4 +54,3 @@ def get_volunteerism_section():
     st.markdown("""
                 [Skouras Sports & Language Camp](https://skourascamp.com/en/) is the largest summer camp in the Balkans, with more than 4'000 children from 10+ EU countries simultaneously on site every summer. During the summers of 2018 and 2019 I had the opportunity to volunteer as a tennis instructor. Recollecting knowledge and experiences from my 10-year journey as an athlete and exploring ways to encourage 2000+ children to actively adopt a healthier lifestyle are things that make me most proud of, when thinking back to those summers. I will never forget the large queues of campers waiting to register for the first ever tournament, the so-called \"Skouras Open\". Giving birth to a tournament we envisioned with coach Kostas and receiving such a warm interest from young campers with little or even no prior engagement with tennis was the greatest reward we received!""",
                 unsafe_allow_html=True)
-    st.divider()
