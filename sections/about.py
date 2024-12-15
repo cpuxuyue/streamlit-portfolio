@@ -20,6 +20,6 @@ def get_contact_section():
     social_media_icons = SocialMediaIcons(social_media_links)
     # st.header("Contact")
     # header_underline()
-    st.write("Feel free to contact me via email, connect with me on LinkedIn or follow me on GitHub, by clicking on the icons below:")
+    st.write("Feel free to contact me via email, connect with me on LinkedIn or follow me on GitHub:")
     # st.divider()
     social_media_icons.render()
