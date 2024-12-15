@@ -58,7 +58,7 @@ with about:
         # st.header("Contact")
         # header_underline()
         st.write(
-            "Feel free to contact me via email, connect with me on LinkedIn or follow me on GitHub, by clicking on the icons below:")
+            "Feel free to contact me via email, connect with me on LinkedIn or follow me on GitHub:")
         # st.divider()
         social_media_icons.render()
     get_about_section()
