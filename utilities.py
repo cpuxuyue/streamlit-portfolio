@@ -22,14 +22,14 @@ def rotate_image():
 
 @st.cache_data(ttl=3600)
 def render_about_information():
-    left, right = st.columns([4, 1])
+    left, right = st.columns([3, 1])
 
     with left:
         st.write("Hello traveller :wave: :flying_saucer:,")
-        st.title("I'm Vasileios Papastergios,")
-        st.write("a Computer Scientist with a passion for delivering data-centric, impactful solutions.")
+        st.title("I'm Yue Xu, PhD")
+        st.markdown("My research interests include Lipid Nanoparticles, Material science, Self-Driving lab, mRNA delivery")
     with right:
-        st.image("Vasileios Papastergios.png")
+        st.image("headshot of Yue Xu.jpg", use_column_width=True)
 
 @st.cache_data(ttl=3600)  # Cache images for 1 hour (=3600 seconds)
 def get_images():

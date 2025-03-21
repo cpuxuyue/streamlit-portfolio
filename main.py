@@ -7,11 +7,12 @@ dir = Path(__file__).absolute()
 sys.path.append(str(dir) + "/sections/")
 
 st.set_page_config(
-    page_title="Vasileios Papastergios' personal website",
+    page_title="Yue Xu's personal website",
     page_icon=":computer:",
 )
 
-
+# 添加 Academicons CDN
+st.markdown('<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">', unsafe_allow_html=True)
 
 with open('style.css') as f:
     st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
@@ -29,60 +30,56 @@ def email_svg():
     render_svg(email_svg)
     return
 
-
 from utilities import render_about_information
+from sections.contact import get_contact_section
 
 render_about_information()
-about, education, achievements, experience, projects, volunteerism = st.tabs(["About", "Education", "Achievements", "Experience", "Projects", "Volunteerism"])
+about, education, academics, teaching, projects, activities, honors, albums = st.tabs(["About", "Education", "Academics", "Teaching", "Projects", "Activities", "Honors", "Albums"])
 
 with about:
-    from social_media_icons import SocialMediaIcons
     def get_about_section():
-        # render_about_information()
-        # st.header("About me")
-        # header_underline()
         st.markdown(
-            """Computer Science graduate with expertise in Data Quality, Artificial Intelligence, and Big Data Management. Passionate about leveraging technology to drive innovative, impactful solutions to real-life problems. Skilled in analytical problem-solving, and cross-functional collaboration. Currently serving as a Research Data Engineer at [Datalab AUTh](https://datalab.csd.auth.gr/), under the supervision of [Prof. Anastasios Gounaris](https://datalab-old.csd.auth.gr/~gounaris/).""")
+            """I am a third-year UHN-PRiME postdoctoral fellow at the Leslie Dan Faculty of Pharmacy, University of Toronto, 
+            with a Ph.D. from China Pharmaceutical University. My research focuses on medicinal and lipid chemistry, 
+            with particular interest in developing AI-guided high-throughput screening platforms for lipid nanoparticle 
+            (LNP) delivery systems. I have published high-impact research and filed patents in the field, and I'm 
+            currently working on mRNA delivery strategies for cancer immunotherapy and intranasal vaccines. My 
+            long-term goal is to lead interdisciplinary drug discovery efforts as a senior scientist in biotech or 
+            as a principal investigator in academia.""")
         get_contact_section()
         st.info(
             "Want to learn more about me? Feel free to explore other sections of this website using the tabs above.")
 
-
-    def get_contact_section():
-        social_media_links = [
-            "mailto:bilpapster@gmail.com",
-            "https://www.linkedin.com/in/bilpapster/",
-            "https://www.github.com/bilpapster/",
-        ]
-        social_media_icons = SocialMediaIcons(social_media_links)
-        # st.header("Contact")
-        # header_underline()
-        st.write(
-            "Feel free to contact me via email, connect with me on LinkedIn or follow me on GitHub:")
-        # st.divider()
-        social_media_icons.render()
     get_about_section()
 
 with education:
     from sections.education import get_education_section
     get_education_section()
 
-with achievements:
-    from sections.achievements import get_achievements_section
-    get_achievements_section()
+with academics:
+    from sections.academics import get_academics_section
+    get_academics_section()
 
-with experience:
-    from sections.experiences import get_experiences_section
-    get_experiences_section()
+with teaching:
+    from sections.teaching import get_teaching_section
+    get_teaching_section()
 
 with projects:
     from sections.projects import get_projects_section
     get_projects_section()
 
-with volunteerism:
-    from sections.volunteerism import get_volunteerism_section
-    get_volunteerism_section()
+with activities:
+    from sections.activities import get_activities_section
+    get_activities_section()
+
+with honors:
+    from sections.honors import get_honors_section
+    get_honors_section()
+
+with albums:
+    from sections.albums import get_albums_section
+    get_albums_section()
 
 st.divider()
-st.markdown('[Back to Top](#i-m-vasileios-papastergios)')
+st.markdown('[Back to Top](#i-m-yue-xu)')
 
