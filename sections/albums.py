@@ -36,9 +36,3 @@ def get_albums_section():
         image = Image.open(cambridge_path)
         st.image(image, caption="Visiting the University of Cambridge (2023)", use_column_width=True)
     
-    st.info("""
-    👆 点击图片可以查看大图
-    
-    💡 如果您想添加更多图片，请将图片文件放在 `assets/images` 目录下，并在代码中更新相应的图片路径和描述。
-    """)
-    
