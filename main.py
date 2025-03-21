@@ -37,7 +37,7 @@ from utilities import render_about_information
 from sections.contact import get_contact_section
 
 render_about_information()
-about, education, academics, teaching, projects, activities, honors, albums = st.tabs(["About", "Education", "Academics", "Teaching", "Projects", "Activities", "Honors", "Albums"])
+about, education, academics, teaching, projects, activities, honors, albums, tools = st.tabs(["About", "Education", "Academics", "Teaching", "Projects", "Activities", "Honors", "Albums", "Tools"])
 
 with about:
     def get_about_section():
@@ -82,6 +82,10 @@ with honors:
 with albums:
     from sections.albums import get_albums_section
     get_albums_section()
+
+with tools:
+    from sections.tools import get_tools_section
+    get_tools_section()
 
 st.divider()
 st.markdown('[Back to Top](#i-m-yue-xu)')
