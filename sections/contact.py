@@ -9,6 +9,7 @@ def get_contact_section():
         "https://www.github.com/cpuxuyue/",
         "https://orcid.org/0000-0001-7672-9170",
         "https://scholar.google.com.hk/citations?user=xJDpDu4AAAAJ&hl",
+        "assets/Yue Xu CV.pdf",
     ]
     social_media_icons = SocialMediaIcons(social_media_links)
     st.write(

@@ -13,7 +13,10 @@ st.set_page_config(
 )
 
 # 添加 Academicons CDN
-st.markdown('<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">', unsafe_allow_html=True)
+st.markdown('<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.1/css/academicons.min.css">', unsafe_allow_html=True)
+
+# 添加 Font Awesome 5 CDN
+st.markdown('<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">', unsafe_allow_html=True)
 
 # 读取样式文件
 style_path = os.path.join(os.path.dirname(__file__), 'style.css')
@@ -44,19 +47,6 @@ from utilities import render_about_information
 from sections.contact import get_contact_section
 
 render_about_information()
-
-# 添加 CV 下载链接
-cv_path = os.path.join(os.path.dirname(__file__), 'assets', 'Yue Xu CV.pdf')
-if os.path.exists(cv_path):
-    with open(cv_path, 'rb') as f:
-        cv_data = f.read()
-    st.download_button(
-        label="Download CV",
-        data=cv_data,
-        file_name="Yue Xu CV.pdf",
-        mime="application/pdf",
-        help="Click to download my CV"
-    )
 
 about, education, academics, teaching, projects, activities, honors, albums, tools = st.tabs(["About", "Education", "Academics", "Teaching", "Projects", "Activities", "Honors", "Albums", "Tools"])
 
