@@ -6,28 +6,39 @@ def get_albums_section():
     st.markdown("### 📸 Albums")
     
     # 创建图片目录
-    if not os.path.exists('assets/images'):
-        os.makedirs('assets/images')
+    images_dir = os.path.join('assets', 'images')
+    if not os.path.exists(images_dir):
+        os.makedirs(images_dir)
     
     # Research Life 部分
     st.markdown("#### Research Life")
     # 研究生活图片
-    if os.path.exists('assets/images/Research Life_Haotian_Graduation1.JPG'):
-        image = Image.open('assets/images/Research Life_Haotian_Graduation1.JPG')
+    graduation1_path = os.path.join(images_dir, 'Research Life_Haotian_Graduation1.JPG')
+    if os.path.exists(graduation1_path):
+        image = Image.open(graduation1_path)
         st.image(image, caption="Graduation ceremony for Haotian (2023)", use_column_width=True)
         
-    if os.path.exists('assets/images/Research Life_Haotian_Graduation2.JPG'):
-        image = Image.open('assets/images/Research Life_Haotian_Graduation2.JPG')
+    graduation2_path = os.path.join(images_dir, 'Research Life_Haotian_Graduation2.JPG')
+    if os.path.exists(graduation2_path):
+        image = Image.open(graduation2_path)
         st.image(image, caption="Celebrating Haotian's graduation (2023)", use_column_width=True)
     
     # Conference & Travel 部分
     st.markdown("#### Conference & Travel")
     # 会议和旅行图片
-    if os.path.exists('assets/images/Conference_Changsha 2022.jpg'):
-        image = Image.open('assets/images/Conference_Changsha 2022.jpg')
+    changsha_path = os.path.join(images_dir, 'Conference_Changsha 2022.jpg')
+    if os.path.exists(changsha_path):
+        image = Image.open(changsha_path)
         st.image(image, caption="Presenting at the Conference in Changsha (2022)", use_column_width=True)
         
-    if os.path.exists('assets/images/Travel_UK cambridge University.JPG'):
-        image = Image.open('assets/images/Travel_UK cambridge University.JPG')
+    cambridge_path = os.path.join(images_dir, 'Travel_UK cambridge University.JPG')
+    if os.path.exists(cambridge_path):
+        image = Image.open(cambridge_path)
         st.image(image, caption="Visiting the University of Cambridge (2023)", use_column_width=True)
+    
+    st.info("""
+    👆 点击图片可以查看大图
+    
+    💡 如果您想添加更多图片，请将图片文件放在 `assets/images` 目录下，并在代码中更新相应的图片路径和描述。
+    """)
     

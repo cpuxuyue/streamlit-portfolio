@@ -1,6 +1,7 @@
 import streamlit as st
 import base64
 import sys
+import os
 from pathlib import Path
 
 dir = Path(__file__).absolute()
@@ -14,7 +15,9 @@ st.set_page_config(
 # 添加 Academicons CDN
 st.markdown('<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">', unsafe_allow_html=True)
 
-with open('style.css') as f:
+# 读取样式文件
+style_path = os.path.join(os.path.dirname(__file__), 'style.css')
+with open(style_path) as f:
     st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
 
 def render_svg(svg):
