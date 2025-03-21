@@ -16,12 +16,12 @@ def get_albums_section():
     graduation1_path = os.path.join(images_dir, 'Research Life_Haotian_Graduation1.JPG')
     if os.path.exists(graduation1_path):
         image = Image.open(graduation1_path)
-        st.image(image, caption="Graduation ceremony for Haotian (2023)", use_column_width=True)
+        st.image(image, caption="Graduation ceremony for Haotian (2024)", use_column_width=True)
         
     graduation2_path = os.path.join(images_dir, 'Research Life_Haotian_Graduation2.JPG')
     if os.path.exists(graduation2_path):
         image = Image.open(graduation2_path)
-        st.image(image, caption="Celebrating Haotian's graduation (2023)", use_column_width=True)
+        st.image(image, caption="Celebrating Haotian's graduation (2024)", use_column_width=True)
     
     # Conference & Travel 部分
     st.markdown("#### Conference & Travel")
@@ -34,5 +34,5 @@ def get_albums_section():
     cambridge_path = os.path.join(images_dir, 'Travel_UK cambridge University.JPG')
     if os.path.exists(cambridge_path):
         image = Image.open(cambridge_path)
-        st.image(image, caption="Visiting the University of Cambridge (2023)", use_column_width=True)
+        st.image(image, caption="Visiting the University of Cambridge (2019)", use_column_width=True)
     

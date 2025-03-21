@@ -29,7 +29,7 @@ def render_about_information():
         st.title("I'm Yue Xu, PhD")
         st.markdown("My research interests include Lipid Nanoparticles, Material science, Self-Driving lab, mRNA delivery")
     with right:
-        st.image("headshot of Yue Xu.jpg", use_column_width=True)
+        st.image("assets/images/headshot_of_Yue_Xu.jpg", use_column_width=True)
 
 @st.cache_data(ttl=3600)  # Cache images for 1 hour (=3600 seconds)
 def get_images():
