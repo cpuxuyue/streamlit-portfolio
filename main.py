@@ -33,10 +33,31 @@ def email_svg():
     render_svg(email_svg)
     return
 
+def cv_svg():
+    cv_svg = """
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M208 0H332.1c12.7 0 24.9 5.1 33.9 14.1l67.9 67.9c9 9 14.1 21.2 14.1 33.9V336c0 26.5-21.5 48-48 48H208c-26.5 0-48-21.5-48-48V48c0-26.5 21.5-48 48-48zM48 128H192v64H64V448H256V416h64v48c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V176c0-26.5 21.5-48 48-48z"/></svg>
+        """
+    render_svg(cv_svg)
+    return
+
 from utilities import render_about_information
 from sections.contact import get_contact_section
 
 render_about_information()
+
+# 添加 CV 下载链接
+cv_path = os.path.join(os.path.dirname(__file__), 'assets', 'Yue Xu CV.pdf')
+if os.path.exists(cv_path):
+    with open(cv_path, 'rb') as f:
+        cv_data = f.read()
+    st.download_button(
+        label="Download CV",
+        data=cv_data,
+        file_name="Yue Xu CV.pdf",
+        mime="application/pdf",
+        help="Click to download my CV"
+    )
+
 about, education, academics, teaching, projects, activities, honors, albums, tools = st.tabs(["About", "Education", "Academics", "Teaching", "Projects", "Activities", "Honors", "Albums", "Tools"])
 
 with about:
